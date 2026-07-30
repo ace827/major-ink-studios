@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget-v2.js"
+  data-voice-public-key="public_key_1197daec2cd9ffad2bf20"
+  data-voice-agent-id="agent_e6a76a5a918ae436f776df6379"
+  data-title="Major Ink Studios"
+  data-color="#c9a227"
+  data-fab-text="Talk to Us"
+  data-bot-name="Major Ink Studios AI Receptionist"
+  data-greeting-message="Hi! You've reached Major Ink Studios. How can I help you today?"
+></script>
 <style>
 :root{
   --ink:#08070a;
@@ -113,7 +123,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:46px;padding-bottom:46px}
 .stat{text-align:center}
 .stat b{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.9rem,4vw,2.9rem);display:block;line-height:1}
-.stat span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.82}
+.stat b span{font:inherit;font-size:inherit;letter-spacing:inherit;text-transform:none;opacity:1}
+.stat>span{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.82;display:block;margin-top:10px}
 
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:52px}
@@ -310,16 +321,6 @@ footer{background:var(--ink2);border-top:1px solid var(--line);padding:64px 0 0}
 <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11v9h14v-9"/></symbol>
 </defs>
 </svg>
-
-<div class="topbar">
-  <div class="wrap">
-    <div class="tb-left">
-      <div class="tb-item"><svg class="icon"><use href="#i-pin"/></svg><span>2501 Palm Ave Ste 101, Miramar, FL 33025</span></div>
-      <div class="tb-item"><svg class="icon"><use href="#i-clock"/></svg><span id="tb-hours">Open Daily from 12 PM</span></div>
-    </div>
-    <a class="tb-item tb-phone" href="tel:+19545442959"><svg class="icon"><use href="#i-phone"/></svg><span>(954) 544-2959</span></a>
-  </div>
-</div>
 
 <nav id="nav">
   <div class="wrap">
