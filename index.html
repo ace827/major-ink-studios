@@ -393,10 +393,10 @@ footer{background:var(--ink2);border-top:1px solid var(--line);padding:64px 0 0}
 
 <section class="stats">
   <div class="wrap">
-    <div class="stat"><b><span data-count="4.9">0</span></b><span>Google Rating</span></div>
-    <div class="stat"><b><span data-count="1945">0</span></b><span>Google Reviews</span></div>
+    <div class="stat"><b><span data-count="4.9">4.9</span></b><span>Google Rating</span></div>
+    <div class="stat"><b><span data-count="1945">1,945</span></b><span>Google Reviews</span></div>
     <div class="stat"><b>7</b><span>Days A Week</span></div>
-    <div class="stat"><b><span data-count="100">0</span>%</b><span>Single-Use Needles</span></div>
+    <div class="stat"><b><span data-count="100">100</span>%</b><span>Single-Use Needles</span></div>
   </div>
 </section>
 
@@ -809,14 +809,21 @@ document.getElementById('burger').onclick = () => { mm.classList.add('open'); do
 document.getElementById('mmClose').onclick = () => { mm.classList.remove('open'); document.body.style.overflow=''; };
 mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.remove('open'); document.body.style.overflow=''; }));
 
-// reveal on scroll
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal,.rl,.rr').forEach(el => io.observe(el));
+// ---- scroll-driven reveals + counters (no IntersectionObserver dependency) ----
+const revealEls = [...document.querySelectorAll('.reveal,.rl,.rr')];
+const countEls  = [...document.querySelectorAll('[data-count]')];
 
-// counters
-const cio = new IntersectionObserver(es => es.forEach(e => {
-  if (!e.isIntersecting) return;
-  const el = e.target, target = parseFloat(el.dataset.count), dec = String(target).includes('.') ? 1 : 0;
+const inView = (el, pad) => {
+  const r = el.getBoundingClientRect();
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  return r.top < vh - (pad || 0) && r.bottom > 0;
+};
+
+function runCounter(el) {
+  if (el.dataset.done) return;
+  el.dataset.done = '1';
+  const target = parseFloat(el.dataset.count);
+  const dec = String(target).includes('.') ? 1 : 0;
   const fmt = v => v.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const finalStr = fmt(target);
   let start = null;
@@ -825,13 +832,29 @@ const cio = new IntersectionObserver(es => es.forEach(e => {
     const p = Math.min((t - start) / 1400, 1);
     el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
     if (p < 1) requestAnimationFrame(step);
+    else el.textContent = finalStr;
   };
   requestAnimationFrame(step);
-  // safety net: if rAF is throttled (background tab, reduced motion), land on the real number anyway
-  setTimeout(() => { if (el.textContent !== finalStr) el.textContent = finalStr; }, 1600);
-  cio.unobserve(el);
-}), { threshold: .5 });
-document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+  // safety net: if rAF is throttled or unavailable, land on the real number anyway
+  setTimeout(() => { el.textContent = finalStr; }, 1700);
+}
+
+function tick() {
+  for (let i = revealEls.length - 1; i >= 0; i--) {
+    if (inView(revealEls[i], 40)) { revealEls[i].classList.add('in'); revealEls.splice(i, 1); }
+  }
+  for (let i = countEls.length - 1; i >= 0; i--) {
+    if (inView(countEls[i], 0)) { runCounter(countEls[i]); countEls.splice(i, 1); }
+  }
+}
+
+addEventListener('scroll', tick, { passive: true });
+addEventListener('resize', tick);
+addEventListener('load', tick);
+tick();
+// belt and braces: nothing on this page should ever stay invisible
+setTimeout(tick, 400);
+setTimeout(tick, 1200);
 
 // faq accordion
 document.querySelectorAll('.q button').forEach(b => b.addEventListener('click', () => {
