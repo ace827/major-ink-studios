@@ -817,14 +817,18 @@ document.querySelectorAll('.reveal,.rl,.rr').forEach(el => io.observe(el));
 const cio = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
   const el = e.target, target = parseFloat(el.dataset.count), dec = String(target).includes('.') ? 1 : 0;
+  const fmt = v => v.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const finalStr = fmt(target);
   let start = null;
   const step = t => {
     if (!start) start = t;
     const p = Math.min((t - start) / 1400, 1);
-    el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
     if (p < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
+  // safety net: if rAF is throttled (background tab, reduced motion), land on the real number anyway
+  setTimeout(() => { if (el.textContent !== finalStr) el.textContent = finalStr; }, 1600);
   cio.unobserve(el);
 }), { threshold: .5 });
 document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
