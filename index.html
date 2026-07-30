@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Major Ink Studios | Tattoo &amp; Piercing Studio in Miramar, FL</title>
+<meta name="description" content="Major Ink Studios is a tattoo and piercing studio at 2501 Palm Ave Ste 101, Miramar, FL. Rated 4.9 stars across 1,945 Google reviews. Call (954) 544-2959.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#08070a;
+  --ink2:#0e0d12;
+  --ink3:#15131a;
+  --ink4:#1e1b25;
+  --line:#2a2632;
+  --gold:#c9a227;
+  --gold2:#e8c44a;
+  --gold3:#8f7318;
+  --text:#f4f1ea;
+  --mid:#a49e94;
+  --dim:#7a7469;
+  --white:#ffffff;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,.dspl{font-family:'Raleway',sans-serif;font-weight:800;line-height:1.08;letter-spacing:-0.02em}
+h1{font-size:clamp(2.4rem,6.5vw,5.4rem);font-weight:900}
+h2{font-size:clamp(1.9rem,4.2vw,3.3rem)}
+h3{font-size:clamp(1.15rem,2.4vw,1.5rem)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.sec{padding:clamp(64px,9vw,120px) 0}
+.eyebrow{font-family:'Raleway',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);display:block;flex:none}
+.eyebrow.ctr{justify-content:center}
+.lead{color:var(--mid);font-size:clamp(1rem,1.6vw,1.12rem);max-width:60ch}
+.ctr{text-align:center}
+.ctr .lead{margin-left:auto;margin-right:auto}
+.icon{width:22px;height:22px;flex:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;min-height:52px;font-family:'Raleway',sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:1px solid transparent;transition:.28s ease;cursor:pointer}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,39,.28)}
+.btn-ghost{border-color:rgba(244,241,234,.28);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* topbar */
+.topbar{background:var(--ink2);border-bottom:1px solid var(--line);font-size:.78rem;color:var(--mid);position:relative;z-index:950}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.tb-left{display:flex;gap:26px;flex-wrap:wrap}
+.tb-item{display:flex;align-items:center;gap:8px}
+.tb-item .icon{width:15px;height:15px;color:var(--gold)}
+.tb-phone{color:var(--gold);font-weight:600;letter-spacing:.04em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:900;background:rgba(8,7,10,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .3s ease,box-shadow .3s ease}
+nav.scrolled{background:rgba(8,7,10,.99);box-shadow:0 2px 30px rgba(0,0,0,.6)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:16px}
+.brand{display:flex;align-items:center;gap:13px}
+.mark{width:44px;height:44px;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);flex:none;transform:rotate(45deg)}
+.mark svg{width:20px;height:20px;transform:rotate(-45deg)}
+.brand-txt strong{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase;display:block;line-height:1.2}
+.brand-txt span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);transition:color .2s;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .25s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{padding:13px 24px;min-height:46px;font-size:.76rem}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);background:transparent;color:var(--text);place-items:center;border-radius:2px;cursor:pointer}
+.burger svg{width:22px;height:22px}
+.mobile-menu{position:fixed;inset:0;background:var(--ink);z-index:999;display:none;flex-direction:column;padding:28px 24px}
+.mobile-menu.open{display:flex}
+.mm-top{display:flex;justify-content:flex-end}
+.mm-close{width:48px;height:48px;border:1px solid var(--line);background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;border-radius:2px}
+.mm-close svg{width:22px;height:22px}
+.mm-links{display:flex;flex-direction:column;gap:6px;margin-top:26px}
+.mm-links a{font-family:'Raleway',sans-serif;font-weight:800;font-size:1.55rem;letter-spacing:.02em;padding:14px 0;border-bottom:1px solid var(--line)}
+.mm-foot{margin-top:auto;display:flex;flex-direction:column;gap:12px}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,7,10,.72) 0%,rgba(8,7,10,.42) 34%,rgba(8,7,10,.66) 66%,rgba(8,7,10,.97) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding:120px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:52px;align-items:end}
+.hero h1{margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--gold);display:block}
+.hero .lead{color:#d8d3c9;max-width:52ch;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.rating-row{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.stars{display:flex;gap:3px;color:var(--gold2)}
+.stars .icon{width:17px;height:17px}
+.rating-row span{font-size:.85rem;color:#d8d3c9;letter-spacing:.03em}
+.infocard{background:rgba(14,13,18,.86);backdrop-filter:blur(14px);border:1px solid var(--line);border-top:2px solid var(--gold);padding:32px}
+.infocard h4{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:700}
+.ic-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ic-row:last-of-type{border-bottom:none}
+.ic-row .icon{color:var(--gold);width:19px;height:19px;margin-top:3px}
+.ic-row b{display:block;font-family:'Raleway',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.02em;margin-bottom:2px}
+.ic-row small{color:var(--mid);font-size:.83rem;line-height:1.55;display:block}
+.infocard .btn{width:100%;margin-top:20px}
+
+/* stats */
+.stats{background:linear-gradient(100deg,var(--gold3),var(--gold));color:#0a0908}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:46px;padding-bottom:46px}
+.stat{text-align:center}
+.stat b{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(1.9rem,4vw,2.9rem);display:block;line-height:1}
+.stat span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.82}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:52px}
+.step{position:relative;padding-top:26px;border-top:1px solid var(--line)}
+.step .num{font-family:'Raleway',sans-serif;font-weight:900;font-size:2.9rem;color:transparent;-webkit-text-stroke:1px var(--gold3);line-height:1;margin-bottom:14px;display:block}
+.step h3{margin-bottom:10px;font-size:1.14rem}
+.step p{color:var(--mid);font-size:.92rem}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.svc{background:var(--ink2);border:1px solid var(--line);overflow:hidden;transition:.3s ease}
+.svc:hover{border-color:var(--gold3);transform:translateY(-5px)}
+.svc-img{height:190px;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.svc:hover .svc-img img{transform:scale(1.07)}
+.svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,7,10,.15),rgba(14,13,18,.9))}
+.svc-body{padding:26px}
+.svc-ico{width:44px;height:44px;border:1px solid var(--gold3);display:grid;place-items:center;color:var(--gold);margin-bottom:16px}
+.svc h3{margin-bottom:10px}
+.svc p{color:var(--mid);font-size:.92rem;margin-bottom:16px}
+.svc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.svc li{display:flex;gap:9px;font-size:.86rem;color:var(--dim)}
+.svc li .icon{width:15px;height:15px;color:var(--gold);margin-top:5px}
+
+/* gallery */
+.gal{background:var(--ink2)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:48px}
+.gal-item{overflow:hidden;position:relative;background:var(--ink3)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease,filter .5s ease;filter:grayscale(35%) contrast(1.05)}
+.gal-item:hover img{transform:scale(1.08);filter:grayscale(0%)}
+.gal-item.tall{grid-row:span 2}
+.gal-item.wide{grid-column:span 2}
+
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.cmp-col{padding:36px;border:1px solid var(--line);background:var(--ink2)}
+.cmp-col.good{border-color:var(--gold3);background:linear-gradient(160deg,rgba(201,162,39,.07),transparent 60%)}
+.cmp-col h3{margin-bottom:22px;font-size:1.2rem}
+.cmp-col.good h3{color:var(--gold)}
+.cmp-col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.cmp-col li{display:flex;gap:12px;font-size:.93rem;color:var(--mid)}
+.cmp-col li .icon{width:18px;height:18px;margin-top:4px;flex:none}
+.cmp-col.bad li .icon{color:#8a5252}
+.cmp-col.good li .icon{color:var(--gold)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-imgs .a1{grid-column:span 2;aspect-ratio:16/10;overflow:hidden}
+.about-imgs .a2,.about-imgs .a3{aspect-ratio:1/1;overflow:hidden}
+.about-imgs img{width:100%;height:100%;object-fit:cover}
+.chk{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:26px}
+.chk li{display:flex;gap:13px;color:var(--mid);font-size:.95rem}
+.chk li .icon{width:19px;height:19px;color:var(--gold);margin-top:4px;flex:none}
+.chk li b{color:var(--text);font-weight:600}
+
+/* reviews */
+.rev{background:var(--ink2)}
+.pullquote{border-left:2px solid var(--gold);padding:8px 0 8px 32px;margin:46px 0 42px;max-width:900px}
+.pullquote p{font-family:'Raleway',sans-serif;font-weight:700;font-size:clamp(1.25rem,2.7vw,2rem);line-height:1.34;letter-spacing:-.01em}
+.pullquote cite{display:block;margin-top:18px;font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rcard{background:var(--ink3);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:14px}
+.rcard .stars .icon{width:14px;height:14px}
+.rcard p{font-size:.93rem;color:var(--mid);flex:1}
+.rcard cite{font-style:normal;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.rcard cite b{color:var(--text);display:block;letter-spacing:.06em;font-size:.85rem;text-transform:none;font-weight:600;margin-bottom:2px}
+
+/* faq */
+.faq{max-width:880px;margin:48px auto 0}
+.q{border-bottom:1px solid var(--line)}
+.q button{width:100%;background:none;border:none;color:var(--text);font-family:'Raleway',sans-serif;font-weight:700;font-size:clamp(.98rem,1.9vw,1.14rem);text-align:left;padding:24px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;cursor:pointer;min-height:56px}
+.q button .icon{color:var(--gold);transition:transform .3s;width:20px;height:20px}
+.q.open button .icon{transform:rotate(180deg)}
+.q .a{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.q .a p{color:var(--mid);font-size:.94rem;padding:0 0 24px;max-width:72ch}
+
+/* area */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.map-card{border:1px solid var(--line);overflow:hidden;background:var(--ink2)}
+.map-card iframe{width:100%;height:340px;border:0;filter:grayscale(1) invert(.92) contrast(.86)}
+.map-card .mc-foot{padding:22px 26px;display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line)}
+.map-card .mc-foot .icon{color:var(--gold);margin-top:3px}
+.hoods{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:26px;background:var(--line)}
+.hoods div{background:var(--ink);padding:15px 18px;display:flex;justify-content:space-between;gap:10px;font-size:.88rem}
+.hoods div span{color:var(--dim);font-size:.8rem}
+
+/* cta band */
+.ctaband{background:var(--ink3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;position:relative;overflow:hidden}
+.ctaband::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 50% 0%,rgba(201,162,39,.14),transparent 70%)}
+.ctaband .wrap{position:relative;z-index:2}
+.bignum{font-family:'Raleway',sans-serif;font-weight:900;font-size:clamp(2.1rem,6.4vw,4.6rem);color:var(--gold);letter-spacing:-.02em;display:inline-block;margin:14px 0 8px}
+.bignum:hover{color:var(--gold2)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px}
+.hours{border:1px solid var(--line);background:var(--ink2)}
+.hours h3{padding:24px 26px;border-bottom:1px solid var(--line);font-size:1.05rem}
+.hrow{display:flex;justify-content:space-between;padding:14px 26px;font-size:.92rem;border-bottom:1px solid rgba(42,38,50,.6)}
+.hrow:last-child{border-bottom:none}
+.hrow.today{background:rgba(201,162,39,.07);color:var(--gold2);font-weight:500}
+.hrow span:first-child{color:var(--mid)}
+.hrow.today span{color:var(--gold2)}
+form{border:1px solid var(--line);background:var(--ink2);padding:36px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+label{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;font-weight:600}
+input,select,textarea{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--text);padding:14px 15px;font-family:inherit;font-size:.94rem;border-radius:2px;min-height:50px;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+.formnote{font-size:.78rem;color:var(--dim);margin-top:14px;text-align:center}
+
+/* footer */
+footer{background:var(--ink2);border-top:1px solid var(--line);padding:64px 0 0}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.f-brand p{color:var(--mid);font-size:.9rem;margin-top:18px;max-width:34ch}
+.f-col h4{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:700}
+.f-col a,.f-col p{display:block;color:var(--mid);font-size:.9rem;margin-bottom:11px;transition:color .2s}
+.f-col a:hover{color:var(--gold)}
+.f-bottom{border-top:1px solid var(--line);padding:24px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:var(--dim)}
+
+/* reveal */
+.reveal,.rl,.rr{opacity:0;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal{transform:translateY(34px)}
+.rl{transform:translateX(-40px)}
+.rr{transform:translateX(40px)}
+.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .steps{grid-template-columns:1fr 1fr}
+  .svc-grid,.rev-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:180px}
+  .nav-links{display:none}
+  .burger{display:grid}
+  .nav-cta{display:none}
+}
+@media(max-width:768px){
+  .tb-left{gap:16px;font-size:.74rem}
+  .hero{min-height:auto}
+  .hero-inner{padding:80px 0 56px}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{width:100%}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:30px}
+  .steps,.svc-grid,.rev-grid,.cmp{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .gal-item.wide{grid-column:span 2}
+  .gal-item.tall{grid-row:span 1}
+  .frow{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .hoods{grid-template-columns:1fr}
+  .about-imgs .a1{aspect-ratio:16/9}
+  form{padding:26px}
+  .pullquote{padding-left:20px}
+}
+@media(max-width:480px){
+  .wrap{padding:0 18px}
+  .tb-left .tb-item:nth-child(2){display:none}
+  .mark{width:38px;height:38px}
+  .brand-txt strong{font-size:.9rem}
+  .infocard{padding:24px}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-.9L3 21l1.9-4.9a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 8.5-8.5h.5a8.4 8.4 0 0 1 8 8z"/></symbol>
+<symbol id="i-needle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5L14 10"/><path d="M17.8 6.2l-9.4 9.4-3.9 4.9 4.9-3.9 9.4-9.4z"/><path d="M4.5 20.5l1.6-1.6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3.5v6c0 5-3.4 9.2-8 10.5-4.6-1.3-8-5.5-8-10.5v-6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9.5 5.5L12 2l2.5 3.5"/></symbol>
+<symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 3-2.4 4.2-3.6 5.4C13 15.8 13 17 13 18a3 3 0 0 1-6 0"/><path d="M10 9a2 2 0 1 1 4 0"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="3.5"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.9"/><path d="M16 3.6a4 4 0 0 1 0 7"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 11v9h14v-9"/></symbol>
+</defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <div class="tb-item"><svg class="icon"><use href="#i-pin"/></svg><span>2501 Palm Ave Ste 101, Miramar, FL 33025</span></div>
+      <div class="tb-item"><svg class="icon"><use href="#i-clock"/></svg><span id="tb-hours">Open Daily from 12 PM</span></div>
+    </div>
+    <a class="tb-item tb-phone" href="tel:+19545442959"><svg class="icon"><use href="#i-phone"/></svg><span>(954) 544-2959</span></a>
+  </div>
+</div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark"><svg><use href="#i-needle"/></svg></span>
+      <span class="brand-txt"><strong>Major Ink Studios</strong><span>Miramar, Florida</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-gold nav-cta" href="tel:+19545442959"><svg class="icon" style="width:16px;height:16px"><use href="#i-phone"/></svg>Call Now</a>
+    <button class="burger" id="burger" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mm">
+  <div class="mm-top"><button class="mm-close" id="mmClose" aria-label="Close menu"><svg><use href="#i-x"/></svg></button></div>
+  <div class="mm-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="mm-foot">
+    <a class="btn btn-gold" href="tel:+19545442959"><svg class="icon" style="width:17px;height:17px"><use href="#i-phone"/></svg>(954) 544-2959</a>
+    <a class="btn btn-ghost" href="https://www.instagram.com/major_ink_studios/" target="_blank" rel="noopener"><svg class="icon" style="width:17px;height:17px"><use href="#i-instagram"/></svg>Instagram</a>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="hero-img">
+    <img src="https://images.pexels.com/photos/28991534/pexels-photo-28991534.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Tattoo artist creating an intricate arm design">
+  </div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="rating-row reveal in">
+            <span class="stars">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </span>
+            <span><strong>4.9</strong> from 1,945 Google reviews</span>
+          </div>
+          <h1>Custom Ink.<br>Clean Piercings.<em>Miramar's Studio.</em></h1>
+          <p class="lead">Major Ink Studios is a full tattoo and piercing studio on Palm Ave in Miramar. Custom tattoo work, fresh piercings, jewelry changes and touch-ups, done in a clean space by a crew that takes the time to get it right.</p>
+          <div class="hero-btns">
+            <a class="btn btn-gold" href="tel:+19545442959"><svg class="icon" style="width:17px;height:17px"><use href="#i-phone"/></svg>Call (954) 544-2959</a>
+            <a class="btn btn-ghost" href="#services">See What We Do <svg class="icon" style="width:17px;height:17px"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <aside class="infocard reveal d2">
+          <h4>Studio Info</h4>
+          <div class="ic-row"><svg class="icon"><use href="#i-pin"/></svg><div><b>Find Us</b><small>2501 Palm Ave Ste 101<br>Miramar, FL 33025</small></div></div>
+          <div class="ic-row"><svg class="icon"><use href="#i-clock"/></svg><div><b>Open Every Day</b><small>Sun&ndash;Thu: 12 PM &ndash; 9 PM<br>Fri &amp; Sat: 12 PM &ndash; 11 PM</small></div></div>
+          <div class="ic-row"><svg class="icon"><use href="#i-store"/></svg><div><b>In-Store Shopping</b><small>Browse jewelry and talk designs in person</small></div></div>
+          <div class="ic-row"><svg class="icon"><use href="#i-instagram"/></svg><div><b>@major_ink_studios</b><small>See the latest work on Instagram</small></div></div>
+          <a class="btn btn-gold" href="tel:+19545442959">Call The Studio</a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><b><span data-count="4.9">0</span></b><span>Google Rating</span></div>
+    <div class="stat"><b><span data-count="1945">0</span></b><span>Google Reviews</span></div>
+    <div class="stat"><b>7</b><span>Days A Week</span></div>
+    <div class="stat"><b><span data-count="100">0</span>%</b><span>Single-Use Needles</span></div>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="ctr">
+      <div class="eyebrow ctr">How It Works</div>
+      <h2>From Idea To Ink In Four Steps</h2>
+      <p class="lead">No mystery, no pressure. Here is exactly how a visit to Major Ink Studios goes.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="num">01</span><h3>Call Or Stop In</h3><p>Ring the studio at (954) 544-2959 or come by during open hours to talk through what you want.</p></div>
+      <div class="step reveal d1"><span class="num">02</span><h3>Design &amp; Placement</h3><p>We go over sizing, placement and style until the design is right. Piercings, we walk you through jewelry options.</p></div>
+      <div class="step reveal d2"><span class="num">03</span><h3>Paperwork &amp; Prep</h3><p>Quick waiver, then the station is set up fresh in front of you with sterile, single-use needles.</p></div>
+      <div class="step reveal d3"><span class="num">04</span><h3>Get It Done</h3><p>We work at your pace, then send you out with clear aftercare so it heals the way it should.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="ctr">
+      <div class="eyebrow ctr">What We Do</div>
+      <h2>Tattoos, Piercings &amp; Everything Between</h2>
+      <p class="lead">A full-service studio built around custom work and clean, careful piercings.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/37006788/pexels-photo-37006788.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tattoo artist carefully inking a client's arm"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-needle"/></svg></span>
+          <h3>Custom Tattoos</h3>
+          <p>Bring a reference, a rough idea or nothing at all. We design around your skin, not a catalog.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Original custom designs</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Small pieces to full sleeves</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Placement and sizing guidance</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc reveal d1">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/7400018/pexels-photo-7400018.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of ear piercings"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-ear"/></svg></span>
+          <h3>Ear Piercings</h3>
+          <p>Lobes, helix, tragus and curated stacks, placed with a steady hand and clean technique.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Single or multiple placements</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Jewelry selected in-store</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Full aftercare instructions</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc reveal d2">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/13161481/pexels-photo-13161481.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of a face with nose piercings"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-sparkle"/></svg></span>
+          <h3>Nose &amp; Facial Piercings</h3>
+          <p>Our most requested piercing. Nostril, septum and more, marked and placed to suit your face.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Nostril &amp; septum</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Symmetry checked before piercing</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Hypoallergenic jewelry options</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/19875392/pexels-photo-19875392.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of a body piercing"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-ring"/></svg></span>
+          <h3>Body Piercings</h3>
+          <p>Navel, and other body placements handled with the same care and sterile setup as everything else.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Belly &amp; body placements</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Anatomy checked first</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Honest advice if it's not a fit</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc reveal d1">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/7479508/pexels-photo-7479508.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Person's ear with a silver stud earring"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-shield"/></svg></span>
+          <h3>Jewelry Changes &amp; Removals</h3>
+          <p>Stuck jewelry, a piece that's irritating you, or just ready for something new. Come in and we'll sort it.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Downsizing &amp; swaps</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Safe piercing removal</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Help identifying irritation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc reveal d2">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/29251828/pexels-photo-29251828.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Artistic floral tattoo on an upper arm"></div>
+        <div class="svc-body">
+          <span class="svc-ico"><svg class="icon"><use href="#i-pen"/></svg></span>
+          <h3>Cover-Ups &amp; Add-Ons</h3>
+          <p>Old work you've outgrown, or a piece you want to build on. We'll tell you straight what's possible.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Cover-up consultations</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Extending existing pieces</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Matching &amp; group tattoos</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec gal" id="gallery">
+  <div class="wrap">
+    <div class="ctr">
+      <div class="eyebrow ctr">The Studio</div>
+      <h2>Inside Major Ink</h2>
+      <p class="lead">Clean stations, good lighting and a crew that treats every piece like it matters.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item tall reveal"><img src="https://images.pexels.com/photos/35714996/pexels-photo-35714996.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Skilled tattoo artist creating artwork in a studio"></div>
+      <div class="gal-item wide reveal d1"><img src="https://images.pexels.com/photos/28991524/pexels-photo-28991524.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Stylish tattoo parlor with an artistic wall mural"></div>
+      <div class="gal-item reveal d2"><img src="https://images.pexels.com/photos/7005656/pexels-photo-7005656.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Artist wearing black gloves holding a tattoo machine"></div>
+      <div class="gal-item reveal"><img src="https://images.pexels.com/photos/7005670/pexels-photo-7005670.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tattoo machine working on a client's shoulder"></div>
+      <div class="gal-item reveal d1"><img src="https://images.pexels.com/photos/28991522/pexels-photo-28991522.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chic tattoo studio interior with decor"></div>
+      <div class="gal-item tall reveal d2"><img src="https://images.pexels.com/photos/29251831/pexels-photo-29251831.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Young woman with a sleeve tattoo in a modern studio"></div>
+      <div class="gal-item reveal d3"><img src="https://images.pexels.com/photos/7005664/pexels-photo-7005664.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tattoo artist adjusting his tattoo machine"></div>
+      <div class="gal-item wide reveal"><img src="https://images.pexels.com/photos/35645871/pexels-photo-35645871.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Intricate arm tattoo being crafted in a studio"></div>
+      <div class="gal-item reveal d1"><img src="https://images.pexels.com/photos/37722196/pexels-photo-37722196.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Portrait of a young woman with facial piercings"></div>
+      <div class="gal-item reveal d2"><img src="https://images.pexels.com/photos/3295586/pexels-photo-3295586.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of a tattoo on a person's arm"></div>
+      <div class="gal-item reveal d3"><img src="https://images.pexels.com/photos/17504545/pexels-photo-17504545.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Client lying down while being tattooed by an artist"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="ctr">
+      <div class="eyebrow ctr">Why Major Ink</div>
+      <h2>Not Every Shop Is The Same</h2>
+      <p class="lead">There are plenty of places to get inked in South Florida. Here is the difference people keep writing about.</p>
+    </div>
+    <div class="cmp">
+      <div class="cmp-col bad rl">
+        <h3>The Rushed Shop</h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-x"/></svg>You feel like a number in a queue</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Design conversation gets skipped</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Nobody explains aftercare properly</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Questions get brushed off</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Nervous first-timers left to figure it out</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Closed exactly when you're free</li>
+        </ul>
+      </div>
+      <div class="cmp-col good rr">
+        <h3>Major Ink Studios</h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-check"/></svg>4.9 stars across 1,945 Google reviews</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Time spent on design before the needle</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Aftercare explained before you leave</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Every question answered, no attitude</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>First tattoo or twentieth, same care</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Open 7 days, late on Friday &amp; Saturday</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs rl">
+        <div class="a1"><img src="https://images.pexels.com/photos/28991646/pexels-photo-28991646.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Tattoo artist in studio creating unique body art"></div>
+        <div class="a2"><img src="https://images.pexels.com/photos/36607084/pexels-photo-36607084.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tattoo artist in action at the studio"></div>
+        <div class="a3"><img src="https://images.pexels.com/photos/7005674/pexels-photo-7005674.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A tattoo artist inside his studio"></div>
+      </div>
+      <div class="rr">
+        <div class="eyebrow">About The Studio</div>
+        <h2>A Miramar Studio People Keep Coming Back To</h2>
+        <p class="lead" style="margin-top:20px">Major Ink Studios sits on Palm Ave in Miramar, serving Broward and north Miami-Dade with custom tattoo work and clean piercings. Nearly two thousand people have left a review, and the average sits at 4.9 stars. That does not happen by accident. It happens because the crew here takes their time, keeps the space spotless and treats a first-timer the same as a regular.</p>
+        <ul class="chk">
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Rated 4.9 out of 5</b> across 1,945 verified Google reviews.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Clean environment</b> is the single thing reviewers mention most, alongside friendly staff.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Tattoos and piercings under one roof</b>, so you are not sent somewhere else halfway through.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>In-store shopping</b> for jewelry, so you can see and try before you commit.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Open every day of the week</b>, with late hours Friday and Saturday until 11 PM.</span></li>
+        </ul>
+        <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-gold" href="tel:+19545442959"><svg class="icon" style="width:17px;height:17px"><use href="#i-phone"/></svg>Call The Studio</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/major_ink_studios/" target="_blank" rel="noopener"><svg class="icon" style="width:17px;height:17px"><use href="#i-instagram"/></svg>See Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev" id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Reviews</div>
+    <h2>1,945 Reviews. 4.9 Stars.</h2>
+    <blockquote class="pullquote reveal">
+      <p>&ldquo;Amazing service, super friendly staff, and clean environment.&rdquo;</p>
+      <cite>&mdash; From the Google review summary for Major Ink Studios</cite>
+    </blockquote>
+    <div class="rev-grid">
+      <div class="rcard reveal">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>&ldquo;Thank you soooo much Fernando! My dad and I decided to go get tattoos, my dad's very first tattoo! And I got a few more than a couple.&rdquo;</p>
+        <cite><b>Florencia Ruiz</b>Google Review</cite>
+      </div>
+      <div class="rcard reveal d1">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>&ldquo;Got such cute tattoos to commemorate my little cousin turning 18 and I could not have asked for a better experience. From the moment we walked in, Nilliam made us feel welcome and was friendly, cheerful, and efficient.&rdquo;</p>
+        <cite><b>Victoria</b>Local Guide &middot; Google Review</cite>
+      </div>
+      <div class="rcard reveal d2">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>&ldquo;We came for a piercing removal. They were very helpful and friendly. We love the decoration and vibes. We thought that it was an infection and ended up being an allergic reaction. They changed the piercing.&rdquo;</p>
+        <cite><b>Melanie Rivera</b>Local Guide &middot; Google Review</cite>
+      </div>
+      <div class="rcard reveal">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>&ldquo;Highly recommend this place for any tattoo/piercing work!&rdquo;</p>
+        <cite><b>Google Review Summary</b>Major Ink Studios</cite>
+      </div>
+      <div class="rcard reveal d1">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>&ldquo;No problem getting my ear pierced, no problem with customer service.&rdquo;</p>
+        <cite><b>Google Review Summary</b>Major Ink Studios</cite>
+      </div>
+      <div class="rcard reveal d2">
+        <span class="stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+        <p>Nose piercings, ear piercings and belly piercings are the three services reviewers mention by name most often on our Google profile.</p>
+        <cite><b>What People Come In For</b>Based on Google review topics</cite>
+      </div>
+    </div>
+    <div style="margin-top:38px">
+      <a class="btn btn-ghost" href="https://www.google.com/maps/place/Major+Ink+Studios/@25.9924969,-80.2976727,15z/data=!4m6!3m5!1s0x88d9af0e168e2ad7:0x2696c1426b501bba!8m2!3d25.9858279!4d-80.2784971!16s%2Fg%2F11gnpwvkwq" target="_blank" rel="noopener">Read All 1,945 Reviews <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="ctr">
+      <div class="eyebrow ctr">Questions</div>
+      <h2>Before You Come In</h2>
+    </div>
+    <div class="faq">
+      <div class="q"><button>Do I need an appointment, or can I just come in?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>The best move is to call the studio at (954) 544-2959 before you head over. That way we can tell you what the day looks like and roughly how long you'd be waiting. We're open every day from 12 PM, and until 11 PM on Friday and Saturday.</p></div></div>
+      <div class="q"><button>What if I'm not sure exactly what I want yet?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>That's normal and it's fine. Bring whatever you have, a photo, a screenshot, a scribble or just a description. We'll talk through style, size and placement until it clicks. Nobody here is going to rush you into a design you're unsure about.</p></div></div>
+      <div class="q"><button>It's my first tattoo. Will you walk me through it?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>Yes. A lot of our reviews come from first-timers, and more than a few from parents getting their very first piece alongside their kid. Fernando and the rest of the crew explain what you'll feel, how long it takes and what to expect after. Ask as many questions as you want.</p></div></div>
+      <div class="q"><button>What piercings do you do?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>Ear, nose and body piercings including navel. Nose, ear and belly piercings are what people mention most in our Google reviews. We also handle jewelry changes and removals, so if something is irritating you or you want to swap it out, come in and we'll take a look.</p></div></div>
+      <div class="q"><button>How clean is the studio?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>Clean environment is the single thing reviewers bring up most often about us, and we intend to keep it that way. Needles are sterile and single-use, stations are set up fresh in front of you, and gloves go on every time. If you want to see how we prep, just ask.</p></div></div>
+      <div class="q"><button>Can I bring a friend or family member with me?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>Absolutely. Plenty of our work is two people getting matching pieces or a group coming in together for a birthday or a milestone. Bring someone if it makes you more comfortable.</p></div></div>
+      <div class="q"><button>What about aftercare?<svg class="icon"><use href="#i-chevron-down"/></svg></button><div class="a"><p>You get clear instructions before you leave, covering cleaning, what to avoid and how long the healing usually takes. If something looks off during healing, call the studio or come back in. We'd much rather look at it than have you guess.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="area" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="area-grid">
+      <div class="map-card rl">
+        <iframe title="Map to Major Ink Studios, 2501 Palm Ave Ste 101, Miramar FL" loading="lazy" src="https://www.google.com/maps?q=2501+Palm+Ave+Ste+101,+Miramar,+FL+33025&output=embed"></iframe>
+        <div class="mc-foot">
+          <svg class="icon"><use href="#i-pin"/></svg>
+          <div><b style="font-family:'Raleway',sans-serif">2501 Palm Ave Ste 101</b><br><small style="color:var(--mid)">Miramar, FL 33025</small></div>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="eyebrow">Where We Are</div>
+        <h2>Easy To Reach From Across Broward</h2>
+        <p class="lead" style="margin-top:18px">We're on Palm Ave in Miramar, a short drive from most of southwest Broward and the north edge of Miami-Dade. Drive times below are rough estimates and depend on traffic.</p>
+        <div class="hoods">
+          <div>Miramar <span>Local</span></div>
+          <div>Pembroke Pines <span>~10 min</span></div>
+          <div>Miramar Park <span>~7 min</span></div>
+          <div>West Park <span>~10 min</span></div>
+          <div>Hollywood <span>~15 min</span></div>
+          <div>Cooper City <span>~15 min</span></div>
+          <div>Davie <span>~20 min</span></div>
+          <div>Hialeah <span>~20 min</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ctaband">
+  <div class="wrap">
+    <div class="eyebrow ctr">Ready When You Are</div>
+    <h2>Let's Talk About Your Next Piece</h2>
+    <a class="bignum" href="tel:+19545442959">(954) 544-2959</a>
+    <p class="lead ctr" style="margin-bottom:26px">Open every day from 12 PM. Fridays and Saturdays we're here until 11 PM.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-gold" href="tel:+19545442959"><svg class="icon" style="width:17px;height:17px"><use href="#i-phone"/></svg>Call The Studio</a>
+      <a class="btn btn-ghost" href="#contact">Request A Callback <svg class="icon" style="width:17px;height:17px"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rl">
+        <div class="eyebrow">Hours</div>
+        <h2 style="margin-bottom:26px">When We're Open</h2>
+        <div class="hours">
+          <h3>Studio Hours</h3>
+          <div class="hrow" data-day="0"><span>Sunday</span><span>12 PM &ndash; 9 PM</span></div>
+          <div class="hrow" data-day="1"><span>Monday</span><span>12 PM &ndash; 9 PM</span></div>
+          <div class="hrow" data-day="2"><span>Tuesday</span><span>12 PM &ndash; 9 PM</span></div>
+          <div class="hrow" data-day="3"><span>Wednesday</span><span>12 PM &ndash; 9 PM</span></div>
+          <div class="hrow" data-day="4"><span>Thursday</span><span>12 PM &ndash; 9 PM</span></div>
+          <div class="hrow" data-day="5"><span>Friday</span><span>12 PM &ndash; 11 PM</span></div>
+          <div class="hrow" data-day="6"><span>Saturday</span><span>12 PM &ndash; 11 PM</span></div>
+        </div>
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px">
+          <a class="tb-item" href="tel:+19545442959" style="gap:12px"><svg class="icon" style="color:var(--gold)"><use href="#i-phone"/></svg><span>(954) 544-2959</span></a>
+          <a class="tb-item" href="https://www.instagram.com/major_ink_studios/" target="_blank" rel="noopener" style="gap:12px"><svg class="icon" style="color:var(--gold)"><use href="#i-instagram"/></svg><span>@major_ink_studios</span></a>
+          <div class="tb-item" style="gap:12px"><svg class="icon" style="color:var(--gold)"><use href="#i-pin"/></svg><span>2501 Palm Ave Ste 101, Miramar, FL 33025</span></div>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="eyebrow">Get In Touch</div>
+        <h2 style="margin-bottom:26px">Request A Callback</h2>
+        <form onsubmit="event.preventDefault();this.querySelector('.formnote').textContent='Thanks. This is a demo form. Please call (954) 544-2959 to reach the studio.';">
+          <div class="frow">
+            <div class="field"><label for="n">Your Name</label><input id="n" name="name" type="text" placeholder="First and last" required></div>
+            <div class="field"><label for="p">Phone Number</label><input id="p" name="phone" type="tel" placeholder="(954) 000-0000" required></div>
+          </div>
+          <div class="field">
+            <label for="s">What Are You Looking For</label>
+            <select id="s" name="service">
+              <option>Custom tattoo</option>
+              <option>Ear piercing</option>
+              <option>Nose or facial piercing</option>
+              <option>Body piercing</option>
+              <option>Jewelry change or removal</option>
+              <option>Cover-up or add-on</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="m">Tell Us About The Idea</label><textarea id="m" name="message" placeholder="Design, size, placement, or any questions you have"></textarea></div>
+          <button class="btn btn-gold" type="submit" style="width:100%">Send Request <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></button>
+          <p class="formnote">Prefer to talk now? Call (954) 544-2959 during open hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="#top">
+          <span class="mark"><svg><use href="#i-needle"/></svg></span>
+          <span class="brand-txt"><strong>Major Ink Studios</strong><span>Miramar, Florida</span></span>
+        </a>
+        <p>Tattoo and piercing studio on Palm Ave in Miramar, rated 4.9 stars across 1,945 Google reviews.</p>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <a href="#services">Custom Tattoos</a>
+        <a href="#services">Ear Piercings</a>
+        <a href="#services">Nose &amp; Facial Piercings</a>
+        <a href="#services">Body Piercings</a>
+        <a href="#services">Jewelry Changes</a>
+      </div>
+      <div class="f-col">
+        <h4>Studio</h4>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#area">Location</a>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="tel:+19545442959">(954) 544-2959</a>
+        <p>2501 Palm Ave Ste 101<br>Miramar, FL 33025</p>
+        <a href="https://www.instagram.com/major_ink_studios/" target="_blank" rel="noopener">@major_ink_studios</a>
+        <p>Open daily from 12 PM</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; <span id="yr"></span> Major Ink Studios. All rights reserved.</span>
+      <span>4.9 stars &middot; 1,945 Google reviews</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// nav scroll state
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30));
+
+// mobile menu
+const mm = document.getElementById('mm');
+document.getElementById('burger').onclick = () => { mm.classList.add('open'); document.body.style.overflow='hidden'; };
+document.getElementById('mmClose').onclick = () => { mm.classList.remove('open'); document.body.style.overflow=''; };
+mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.remove('open'); document.body.style.overflow=''; }));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal,.rl,.rr').forEach(el => io.observe(el));
+
+// counters
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, target = parseFloat(el.dataset.count), dec = String(target).includes('.') ? 1 : 0;
+  let start = null;
+  const step = t => {
+    if (!start) start = t;
+    const p = Math.min((t - start) / 1400, 1);
+    el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+  cio.unobserve(el);
+}), { threshold: .5 });
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+// faq accordion
+document.querySelectorAll('.q button').forEach(b => b.addEventListener('click', () => {
+  const q = b.parentElement, a = q.querySelector('.a'), open = q.classList.contains('open');
+  document.querySelectorAll('.q.open').forEach(o => { o.classList.remove('open'); o.querySelector('.a').style.maxHeight = null; });
+  if (!open) { q.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+}));
+
+// highlight today's hours + topbar status
+(() => {
+  const d = new Date(), day = d.getDay();
+  const row = document.querySelector('.hrow[data-day="' + day + '"]');
+  if (row) row.classList.add('today');
+  const closeHr = (day === 5 || day === 6) ? 23 : 21;
+  const h = d.getHours();
+  const open = h >= 12 && h < closeHr;
+  const tb = document.getElementById('tb-hours');
+  if (tb) tb.textContent = open ? 'Open now · Closes ' + (closeHr === 23 ? '11 PM' : '9 PM') : 'Opens today at 12 PM';
+})();
+</script>
+</body>
+</html>
