@@ -73,8 +73,9 @@ nav{position:sticky;top:0;z-index:900;background:rgba(8,7,10,.94);backdrop-filte
 nav.scrolled{background:rgba(8,7,10,.99);box-shadow:0 2px 30px rgba(0,0,0,.6)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:16px}
 .brand{display:flex;align-items:center;gap:13px}
-.mark{width:44px;height:44px;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);flex:none;transform:rotate(45deg)}
-.mark svg{width:20px;height:20px;transform:rotate(-45deg)}
+.mark{width:52px;height:52px;flex:none;border-radius:50%;overflow:hidden;background:#000;display:block}
+.mark img{width:100%;height:100%;object-fit:cover;display:block}
+footer .mark{width:64px;height:64px}
 .brand-txt strong{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase;display:block;line-height:1.2}
 .brand-txt span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
 .nav-links{display:flex;gap:30px;align-items:center}
@@ -325,7 +326,7 @@ footer{background:var(--ink2);border-top:1px solid var(--line);padding:64px 0 0}
 <nav id="nav">
   <div class="wrap">
     <a class="brand" href="#top">
-      <span class="mark"><svg><use href="#i-needle"/></svg></span>
+      <span class="mark"><img src="logo.png" alt="Major Ink Studios logo" width="447" height="447"></span>
       <span class="brand-txt"><strong>Major Ink Studios</strong><span>Miramar, Florida</span></span>
     </a>
     <div class="nav-links">
@@ -760,7 +761,7 @@ footer{background:var(--ink2);border-top:1px solid var(--line);padding:64px 0 0}
     <div class="f-grid">
       <div class="f-brand">
         <a class="brand" href="#top">
-          <span class="mark"><svg><use href="#i-needle"/></svg></span>
+          <span class="mark"><img src="logo.png" alt="Major Ink Studios logo" width="447" height="447"></span>
           <span class="brand-txt"><strong>Major Ink Studios</strong><span>Miramar, Florida</span></span>
         </a>
         <p>Tattoo and piercing studio on Palm Ave in Miramar, rated 4.9 stars across 1,945 Google reviews.</p>
